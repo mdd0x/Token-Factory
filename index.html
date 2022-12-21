@@ -3,16 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Bootstrap CSS -->
-
 	<link rel="stylesheet" href="js/bootstrap.min.css">
+	<title>Coin AI Token Factory</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,400;1,200&display=swap" rel="stylesheet">
 
-	<title> Token Factory- Issuing your own token on the Ethereum with one click</title>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/sweetAlert.js"></script>
 	<script src="js/web3.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
 
 
 	<script type="text/javascript">
@@ -244,6 +243,24 @@ var lang = usrlang;
 
 <style type="text/css">
 
+	body{
+		font-family: 'Chivo Mono', monospace !important;
+	}
+
+	.card-body {
+		background: #000;
+	}
+
+	.btn-primary{
+		background: #a3cb38;
+		color: #000;
+	}
+
+	.btn-primary:hover {
+		background: #a3cb38;
+		color: #000;
+	}
+
 	button
 	{
 
@@ -335,8 +352,18 @@ var lang = usrlang;
 
 	}
 
+	input,.form-control{
+		background: none !important;
+		color: white;
+		margin:5px 0;
+	}
+	label {
+		    color: antiquewhite;
+
+	}
+
 	#loader1 {
-		width: 200px;
+		width: 70px;
 		display: none;
 	}
 
@@ -420,125 +447,46 @@ var lang = usrlang;
 
 
 
-<body class="text-secondary font-weight-light l-bg-blue-dark">
-
-	<header class="d-flex flex-column flex-md-row align-items-center text-dark p-3 px-md-4 mb-3 bg-white  shadow-sm">
-		<img class="m-3" src="img/logo.png">
-		<p class="h5 my-0 me-md-auto fw-normal lang"    key="SetTitle" >Token Factory-Issuing your own token on the Ethereum/ETH-like with One-Click</p>
-
-
-		<ul class="navbar-nav align-items-lg-center ml-lg-auto">
-			<li class="nav-item">
-
-				<!-- language -->
-				<div class="d-flex justify-content-end">
-
-					<span class="text-dark m-3 p-3  " id='CurrentAddress'  > </span>
-
-					<img class="m-1"  src="mm-logo.svg" width="150" alt=""  >
-
-					<div class="m-1">
-						<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-
-						<img class="img-profile rounded-circle"
-						width="50" height="50" src="img/lang.png">
-					</a>
-
-                            <!--
-<button id="en" class="translate">English</button>
-<button id="zh-CN" class="translate">简体中文</button>
-<button id="ru" class="translate">русский</button> 
-<button id="ko" class="translate">한국어</button> 
-<button id="fa" class="translate">فارسی</button> 
-<button id="ja" class="translate">日本語</button> 
-<button id="th" class="translate">ไทย</button> 
--->
-<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-aria-labelledby="userDropdown">
-<a id="en" class="dropdown-item translate" href="#">
-	<i  class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-	English
-</a>
-<a id="zh-CN"  class="dropdown-item translate" href="#">
-	<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
-	简体中文
-</a>
-
-
-
-
-<a id="ru"  class="dropdown-item translate" href="#">
-	<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
-	русский
-</a>
-<a id="ko"  class="dropdown-item translate" href="#">
-	<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
-	한국어
-</a>
-
-<a id="fa"  class="dropdown-item translate" href="#">
-	<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
-	فارسی
-</a>
-
-<a id="ja"  class="dropdown-item translate" href="#">
-	<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
-	日本語
-</a>
-
-<a id="th"  class="dropdown-item translate" href="#">
-	<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400 translate"></i>
-	ไทย
-</a>
-<!--     <div class="dropdown-divider"></div>-->
+<body class="text-secondary font-weight-light" style="background: #000">
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">
+  	<img class="m-3" src="logo.svg" width="150px">
+  </a>
+  <button class="navbar-toggler" style="background: white;" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto text-white">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">C Chart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Website</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="jumbotron text-white" style="background: #000;margin-bottom: 0 !important;">
+  <div class="container">
+    <h1 class="display-4">C Factory</h1>
+    <p class="lead">Deploy ERC-20 token in any network easily. The platform will detect your blockchain network automatically in your metamask browser or mobile app.</p>
+    <p class="lead">Wallet:
+		<span class="" id='CurrentAddress' style="color:#a3cb38;font-weight: bold;" > </span>
+     </p>
+  </div>
 
 </div>
-</div>   
-</div> 
-
-
-
-
-
-
-
-
-</li>
-
-
-
-
-
-
-
-</ul>
-
-</header>
-
-
-<!--.......  <nav class="my-2 my-md-0 me-md-3"> ......-->
-
-
-  <!--....... 
-     <a id="en" class="p-2 text-dark translate"  >English</a>
-    <a id="zh-CN" class="p-2 text-dark translate"  >简体中文</a>
-    ......-->
-
 </nav>
-
-<div class="d-flex justify-content-center m-5">
-	<div class="card shadow-lg  w-50" >
+<div class="container">
+	<div class="card shadow-lg" style="background: none">
 		<div class="card-body">
-			<center> <h5 class="  card-title m-3 text-dark">Token Factory</h5> </center> 
 
 
 			<form >  
 				<div class=" ">  
 
 
-					<div id="FixedDes" class="alert alert-primary lang" role="alert"  key="FixedDesKey"> You can issue a fixed amount of erc20 tokens with one-click。</div>
+					<!-- <div id="FixedDes" class="alert alert-primary lang" role="alert"  key="FixedDesKey"> You can issue a fixed amount of erc20 tokens with one-click。</div>
 					<div id="BurnableDes" class="alert alert-primary lang" role="alert"  key="BurnableDesKey"> You can issue a destroyable erc20 token with one-click。</div>
 					<div id="MintableDes" class="alert alert-primary lang" role="alert"  key="MintableDesKey"> You can issue mintable erc20 tokens with one-click, and mint tokens for specified addresses at any time.</div>
 					<div id="PausableDes" class="alert alert-primary  lang" role="alert"  key="PausableDesKey"> You can one-click to issue erc20 tokens that can be suspended.</div>
@@ -555,14 +503,14 @@ aria-labelledby="userDropdown">
 
 					<div id="PermitDes" class="alert alert-primary lang" role="alert"  key="PermitDesKey">  Keeps track of historical balances for voting in on-chain governance, with a way to delegate one's voting power to a trusted account. </div>
 
-					<div id="VotesDes" class="alert alert-primary lang" role="alert"  key="VotesDesKey"> Without paying gas, token holders will be able to allow third parties to transfer from their account.  </div>
+					<div id="VotesDes" class="alert alert-primary lang" role="alert"  key="VotesDesKey"> Without paying gas, token holders will be able to allow third parties to transfer from their account.  </div> -->
 
 
 					<div id="TokenDescription"> </div>
 					<div id="InstallMetamaskDescription"></div>
 
 					<fieldset class="form-group">
-						<label for="exampleSelect1"  class="lang" key="typeOfToken">Type OF Token</label>
+						<label for="exampleSelect1"  class="lang" key="typeOfToken">Token Type</label>
 
 
 						<select  id = "SelectIWant" class="form-control" name="state" onchange="IWantChange( )">
@@ -595,12 +543,12 @@ aria-labelledby="userDropdown">
 
 
 <fieldset class="form-group NameField">
-	<label for="FloorWidthA" class="lang" key="Name">Token Name(For example: Tesla)</label>
+	<label for="FloorWidthA" class="lang" key="Name">Token Name</label>
 	<input id="name" class="form-control " type="text" />
 </fieldset>
 
 <fieldset class="form-group SymbolField">
-	<label for="FloorWidthA" class="lang" key="Symbol">Token Symbol(For example: TSLA)</label>
+	<label for="FloorWidthA" class="lang" key="Symbol">Token Symbol</label>
 	<input id="symbol" class="form-control" type="text" />
 </fieldset>
 
@@ -612,7 +560,7 @@ aria-labelledby="userDropdown">
 </fieldset>
 -->
 <fieldset class="form-group SupplyField">
-	<label for="FloorWidthA" class="lang" key="SupplyAmount">supplyAmount</label>
+	<label for="FloorWidthA" class="lang" key="SupplyAmount">Total Supply</label>
 	<input id="supplyAmount" class="form-control" type="text" value=1000000000000 />
 </fieldset>
 
@@ -632,7 +580,7 @@ aria-labelledby="userDropdown">
 
 
 <fieldset class="form-group AdminField">
-	<label for="FloorWidthA"  class="lang" key="AdminAddress">Admin Address</label>
+	<label for="FloorWidthA"  class="lang" key="AdminAddress">Owner Address</label>
 	<input id="adminAddress" class="form-control" disabled="disabled" type="text" placeholder="admin Address"/>
 </fieldset>
 
@@ -666,11 +614,11 @@ aria-labelledby="userDropdown">
 <center><a id="addToMetamaskButton" class="btn btn-info shadow lang text-white"   key="addToMetamaskButtonKey"   >Add Token to Metamask</a> </center>  <br>
 
 <center> <div id="FormTips" class="lang text-danger" key="FormTipsKey"  >  Please fill out the form completely。  </div></center>
-<center><img id="loader1" src="loading.gif"></img></center>
+<center><img id="loader1" src="https://media.tenor.com/tga0EoNOH-8AAAAM/loading-load.gif" width="15px"></img></center>
 
 
 
-<center><button  id="TokenSubmit" class="btn btn-primary ml-auto" type="button" title="Next">Create Token</button></center>
+<center><button  id="TokenSubmit" class="btn btn-primary btn-block" type="button" title="Next">Deploy Now</button></center>
 
 </form>
 
@@ -730,51 +678,8 @@ aria-labelledby="userDropdown">
 <footer class="pt-4 my-md-5   shadow">
     <div class="container  text-white">
         <footer class="py-5">
-            <div class="row">
-                <div class="col-4">
-                    <h5> </h5>
-                    <ul class="nav flex-column">
-<li class="nav-item mb-2"><a href="https://dapp404.com/Token-Factory" class="nav-link p-0 text-dark ">Token Factory</a></li>
-<li class="nav-item mb-2"><a href="https://dapp404.com/Bee-Sender/" class="nav-link p-0 text-dark ">Bee Sender</a></li>
-<li class="nav-item mb-2"><a href="https://dapp404.com/Blockchain-To-Metamask/" class="nav-link p-0  text-dark">Chain List</a></li>
-
-
-                    </ul>
-                </div>
-
-                <div class="col-4">
-                    <h5> </h5>
-                    <ul class="nav flex-column">
-
-
-
-
-                    </ul>
-                </div>
-
-                <div class="col-4">
-                    <h5> </h5>
-                   <ul class="nav flex-column">
-
-
-<li class="nav-item mb-2"><a href="https://dapp404.com/Cryptocurrency-Paper-Wallet-Generator" class="nav-link p-0 text-dark">Paper Wallet Generator</a></li>
-
-
-
-<li class="nav-item mb-2"><a href="https://dapp404.com/Bulk-NFT-to-Opensea" class="nav-link p-0 text-dark">Bulk NFT</a></li>
-
-
-<li class="nav-item mb-2"><a href="https://dapp404.com/Stake-NFT" class="nav-link p-0 text-dark">NFT Box-NFT Staking Market</a></li>
-
-
-                    </ul>
-                </div>
-
-
-            </div>
-
             <div class="d-flex justify-content-between text-dark py-4 my-4  ">
-                <p>© 2022 AlgoNetwork, All rights reserved.</p>
+                <p>© 2022 Coin AI, All rights reserved.</p>
                 <ul class="list-unstyled d-flex">
                     <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
                     <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
